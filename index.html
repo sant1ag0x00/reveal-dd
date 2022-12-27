@@ -1,40 +1,165 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>dd Zeitlos gut oder ana­chro­nis­tischer Fetisch?</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <p style="font-size: 60px; font-weight: bold">dd</p>
+        <br>
+        <p class="fragment fade-up">Zeitlos gut oder ana­chro­nis­tischer Fetisch?</p>
+      </section>
+
+      <section>
+        <section>
+          <h3>Geschichte</h3>
+          <br>
+          <p class="fragment fade-up">... woher kommts?</p>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <p class="fragment fade-up">Erstmals erschienen mit Unix Version 5 im Juni 1974</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">Version in den GNU coreutils spaeter von Paul Rubin, David MacKenzie, and
+                Stuart Kemp geschrieben</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">...and it's been loved and hated ever since</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Namensherkunft</h3>
+          <br>
+          <p class="fragment fade-up">Wofür steht dd eigentlich?</p>
+        </section>
+        <section>
+          <ul>
+            <li>
+              <p class="fragment fade-up">Man weiß es nicht genau...</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">Data Definition, nach dd statement in IBM's JLC</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">Ursprünglich cc(copy and convert) geplant aber schon für C Compiler
+                vergeben</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">duplicate data, disk dump, data dump, duplicate device, direct disc...</p>
+            </li>
+            <li>
+              <p class="fragment fade-up">Disk Duplicator/Destroyer^^</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Weirdness</h3>
+          <br>
+          <p class="fragment fade-up">Was isn daran jetzt so komisch?</p>
+        </section>
+        <section>
+          <h3>Syntax<h3>
+              <section>
+                <pre><code data-trim data-noescape>
+    # dd
+    dd if=image.iso of=/dev/sdb bs=4M
+    # cat
+    cat image.iso >/dev/sdb
+
+    # dd
+    dd if=/dev/zero of=image.iso bs=4MB count=25
+    # head
+    head -c 100MB /dev/zero >image.iso
+  </code></pre>
+              </section>
+        </section>
+        <section>
+          <h3>Hohe Anfälligkeit für Human error</h3>
+          <div class="r-stack">
+            <img class="fragment" src="./images/dd_fail1.png">
+            <img class="fragment" src="./images/dd_fail2.png">
+            <img class="fragment" src="./images/dd_fail3.png">
+          </div>
+        </section>
+        <section>
+          <h3>Wenige Usecases ohne einfachere (&sicherer) Alternative</h3>
+          <ul>
+            <li><p class="fragment fade-up">Daten kopieren -> cat, cp, etc.</p></li>
+            <li><p class="fragment fade-up">Backups -> tar, borg, clonezilla, diverse andere Tools</p></li>
+            <li><p class="fragment fade-up">Bootable images auf Datenträger -> Etcher, Ventoy, Startup Disk Creator(Ubuntu)...</p></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Usecases</h3>
+          <ul>
+            <li><p class="fragment fade-up">ASCII to EBCDIC Conversion(ursprünglicher Usecase)</p></li>
+            <li><p class="fragment fade-up">Disks überschreiben</p></li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>But Why?!</h3>
+          <br>
+          <p class="fragment fade-up">...ein Erklärungsversuch</p>
+        </section>
+        <section>
+          <h3>Möglich Motive</h3>
+          <ul>
+            <li><p class="fragment fade-up">Masochismus</p></li>
+            <li><p class="fragment fade-up">Nervenkitzel</p></li>
+            <li><p class="fragment fade-up">Weils edgy ist</p></li>
+            <li><p class="fragment fade-up">Ooooder man hat einen der Usecases^^</p></li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Fazit(+Steinigung?)</h3>
+          <br>
+          <p class="fragment fade-up">Wer noch nie eine Disk mit dd kaputt gemacht hatte werfe den ersten Stein</p>
+          <p class="fragment fade-up">Was kann man vielleicht mitnehmen?</p>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
